@@ -1,8 +1,8 @@
-interface TodoListProps {
+export interface TodoListProps {
     items: {id: string, text: string}[]
 }
 
-const TodoList = ({items}: TodoListProps): JSX.Element => {
+const TodoList = ({items}: TodoListProps) => {
     return (
         <ul>
             {items.map((todo) => (
