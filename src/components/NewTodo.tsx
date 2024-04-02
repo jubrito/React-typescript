@@ -1,21 +1,18 @@
-import { ChangeEvent, FormEvent, useRef, useState } from "react";
-import {TodoListProps} from './TodoList';
+import { FormEvent, useRef } from "react";
 
 
 interface Props {
-    items: any,
-    setTodos: any
+    addHandler: (text: string) => void;
 }
 
-const NewTodo = ({items, setTodos}: Props) => {
+const NewTodo = ({addHandler}: Props) => {
 
     const textInputRef = useRef<HTMLInputElement>(null);
-    const [inputText, setInputText] = useState("");
 
     function handleSubmit (event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
        const enteredText = textInputRef.current!.value;
-       console.log('enteredText', enteredText)
+       addHandler(enteredText);
     }
 
     return (
