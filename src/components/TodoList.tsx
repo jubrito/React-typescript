@@ -1,4 +1,5 @@
 import { Todo } from "../todo.model";
+import './TodoList.css';
 export interface Props {
     items: Todo[];
     deleteHandler: (todoId: string) => void;

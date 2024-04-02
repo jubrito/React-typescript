@@ -1,5 +1,5 @@
 import { FormEvent, useRef } from "react";
-
+import './NewTodo.css';
 
 interface Props {
     todoAddHandler: (todoText: string) => void;
@@ -17,7 +17,7 @@ const NewTodo = ({todoAddHandler}: Props) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className="form-control">
                 <label htmlFor="todo-text">
                     To-do text
                 </label>
